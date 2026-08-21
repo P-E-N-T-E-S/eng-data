@@ -30,10 +30,10 @@ TETO="$(ler TetoBytesPorConsulta)"
 # As datas sao calculadas na hora, nunca versionadas: a janela do gerador
 # termina sempre hoje. python3 porque o `date` do macOS e o do Linux divergem.
 data() { python3 -c "import datetime as d;print((d.date.today()-d.timedelta(days=$1)).isoformat())"; }
-D1="$(data 2)"; D2="$(data 1)"; D3="$(data 0)"
+D1="$(data 9)"; D2="$(data 8)"; D3="$(data 7)"; D4="$(data 6)"; D5="$(data 5)"; D6="$(data 4)"; D7="$(data 3)"; D8="$(data 2)"; D9="$(data 1)"; D10="$(data 0)"
 
 STACK="eda-a04-${LOGIN}"
-echo "regiao ${REGIAO} · login ${LOGIN} · particoes ${D1} ${D2} ${D3}"
+echo "regiao ${REGIAO} · login ${LOGIN} · particoes ${D1} ${D2} ${D3} ${D4} ${D5} ${D6} ${D7} ${D8} ${D9} ${D10}"
 
 aws cloudformation deploy \
   --region "$REGIAO" \
@@ -42,7 +42,9 @@ aws cloudformation deploy \
   --parameter-overrides \
       "Turma=${TURMA}" "Sufixo=${LOGIN}" "Owner=${OWNER}" \
       "TetoBytesPorConsulta=${TETO}" \
-      "DataParticao1=${D1}" "DataParticao2=${D2}" "DataParticao3=${D3}" \
+      "DataParticao1=${D1}" "DataParticao2=${D2}" "DataParticao3=${D3}" "DataParticao4=${D4}" \
+      "DataParticao5=${D5}" "DataParticao6=${D6}" "DataParticao7=${D7}" "DataParticao8=${D8}" \
+      "DataParticao9=${D9}" "DataParticao10=${D10}" \
   --tags Disciplina=EDA Aula=04 "Turma=${TURMA}" "Owner=${OWNER}"
 
 echo
@@ -62,4 +64,4 @@ echo "export BUCKET=$(saida BucketName)"
 echo "export DATABASE=$(saida DatabaseName)"
 echo "export TABELA=$(saida TableName)"
 echo "export WORKGROUP=$(saida WorkGroupName)"
-echo "export DT=${D3}"
+echo "export DT=${D10}"
