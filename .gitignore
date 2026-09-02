@@ -428,6 +428,6 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-saida/*
+*/saida/*
 
 .DS_Store
