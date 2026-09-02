@@ -29,6 +29,7 @@ Metadata:
           - DataParticao1
           - DataParticao2
           - DataParticao3
+          - DataParticao4
 
 Parameters:
   Turma:
@@ -74,7 +75,35 @@ Parameters:
   DataParticao3:
     Type: String
     AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
-    Description: Terceira particao declarada - esta e a de hoje.
+    Description: Terceira particao declarada.
+  DataParticao4:
+    Type: String
+    AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    Description: Quarta particao declarada.
+  DataParticao5:
+    Type: String
+    AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    Description: Quinta particao declarada.
+  DataParticao6:
+    Type: String
+    AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    Description: Sexta particao declarada.
+  DataParticao7:
+    Type: String
+    AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    Description: Setima particao declarada.
+  DataParticao8:
+    Type: String
+    AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    Description: Oitava particao declarada.
+  DataParticao9:
+    Type: String
+    AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    Description: Nona particao declarada.
+  DataParticao10:
+    Type: String
+    AllowedPattern: "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    Description: Decima particao declarada - esta e a de hoje.
 
 Resources:
 
@@ -152,7 +181,8 @@ Resources:
               # true: linha quebrada vira null e a consulta responde.
               # false: uma linha ruim derruba a consulta inteira com HIVE_BAD_DATA.
               # Justifique em DECISOES.md quem paga o que voce escolheu.
-              "ignore.malformed.json": "SEU_VALOR_AQUI"   # <- completar
+              "ignore.malformed.json": "true"   # <- completar
+              "use.null.for.invalid.data": "true"
           Columns:
             - Name: corrida_id
               Type: string
@@ -168,9 +198,9 @@ Resources:
             # Justifique em DECISOES.md o que o SELECT devolveu - nao o que
             # voce supos.
             - Name: data_corrida
-              Type: SEU_TIPO_AQUI   # <- completar
+              Type: timestamp   # <- completar
             - Name: fim
-              Type: SEU_TIPO_AQUI   # <- completar
+              Type: timestamp   # <- completar
             - Name: distancia_km
               Type: double
             - Name: duracao_min
@@ -180,7 +210,7 @@ Resources:
             # manda "17,82", com virgula decimal.
             # Justifique em DECISOES.md o que voce aceita perder.
             - Name: valor
-              Type: SEU_TIPO_AQUI   # <- completar
+              Type: double   # <- completar
 
   # 4 - As particoes. Tres das trinta, e a ausencia das outras 27 e conteudo:
   # dado nao catalogado e dado que nao existe para quem pergunta.
@@ -204,6 +234,171 @@ Resources:
             SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
             Parameters:
               "ignore.malformed.json": "true"
+
+  Particao2:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao2
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao2}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+
+  Particao3:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao3
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao3}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+  Particao4:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao4
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao4}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+  Particao5:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao5
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao5}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+  Particao6:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao6
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao6}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+  Particao7:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao7
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao7}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+  Particao8:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao8
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao8}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+  Particao9:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao9
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao9}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+  Particao10:
+    Type: AWS::Glue::Partition
+    DependsOn: CorridasTable
+    Properties:
+      CatalogId: !Ref AWS::AccountId
+      DatabaseName: !Ref RawDatabase
+      TableName: corridas
+      PartitionInput:
+        Values:
+          - !Ref DataParticao10
+        StorageDescriptor:
+          Location: !Sub "s3://${LakeBucket}/raw/corridas/dt=${DataParticao10}/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+            Parameters:
+              "ignore.malformed.json": "true"
+
 
   # DECISAO 04 - quantas das 30 particoes voce declara.
   # O criterio 3 exige no minimo 3, e uma delas precisa ser a de hoje.
