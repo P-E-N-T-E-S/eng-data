@@ -1,0 +1,39 @@
+# ===== Python =====
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# ===== Dados (nao vao pro git: grandes / binarios) =====
+*.csv
+*.xlsx
+data/raw/
+dados/BancoVDE_*.csv
+
+# ===== AWS / IaC =====
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+terraform.tfvars.local
+*.tfvars.local
+crash.log
+.aws-sam/
+
+# ===== AWS creds (NUNCA comitar) =====
+*.pem
+*.key
+.env
+aws_credentials
+
+# ===== SO / editor =====
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ===== Resultados de query (volumosos) =====
+athena-results/
+
+.venv
