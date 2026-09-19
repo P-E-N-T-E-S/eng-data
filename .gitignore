@@ -429,5 +429,9 @@ FodyWeavers.xsd
 *.msp
 
 */saida/*
+*/dados/*
+*.xlsx
 
 .DS_Store
+*/.venv/
+.terraform/
