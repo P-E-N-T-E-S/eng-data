@@ -35,7 +35,7 @@ variable "workgroup_name" {
 }
 
 variable "bytes_scanned_cutoff" {
-  description = "Teto de bytes por consulta (DECISAO 05). ~400MB mata a larga e deixa a certa."
+  description = "Teto medido entre a maior particao anual e a leitura completa do lake."
   type        = number
   default     = 419430400 # 400 MB
 }
