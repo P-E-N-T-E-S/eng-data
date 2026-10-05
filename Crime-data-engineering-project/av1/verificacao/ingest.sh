@@ -24,5 +24,5 @@ echo
 echo "pronto. confira no Athena (workgroup eda262-g04-crime-wg):"
 echo "  SELECT uf, ano, SUM(total_vitima) AS homicidios"
 echo "  FROM \"eda262_g04_crime_db\".\"crime_trusted\""
-echo "  WHERE evento ILIKE '%Homicidio%' AND evento NOT ILIKE '%Tentativa%'"
+echo "  WHERE evento = 'Homicídio doloso'"
 echo "  GROUP BY uf, ano ORDER BY uf, ano;"
