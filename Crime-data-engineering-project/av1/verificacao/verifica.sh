@@ -59,8 +59,8 @@ if aws s3api head-bucket --bucket "$BUCKET" --region "$REGIAO" 2>/dev/null; then
 else nao "s3://${BUCKET} nao encontrado"; fi
 echo
 
-# ---------------------------------------------------------- criterio 2: database + tabela + 16 colunas
-echo "CRITERIO 2 - schema declarado (>=16 colunas, particao ano)"
+# ---------------------------------------------------------- criterio 2: database + tabela + 16 colunas logicas
+echo "CRITERIO 2 - schema declarado (15 fisicas + particao ano = 16 logicas)"
 tabela="$(aws glue get-table --database-name "$DATABASE" --name "$TABLE" \
   --region "$REGIAO" --output json 2>/dev/null || true)"
 if [[ -z "$tabela" ]]; then
@@ -72,9 +72,9 @@ else
     "import json,sys;k=json.load(sys.stdin)['Table'].get('PartitionKeys',[]);print(','.join(c['Name'] for c in k))")"
   info "colunas declaradas: ${ncol}"
   info "chave de particao: ${chave:-nenhuma}"
-  if [[ "$ncol" -ge 16 && "$chave" == "ano" ]]; then
-    ok ">= 16 colunas e particao 'ano'"
-  else nao "exige >= 16 colunas (tem ${ncol}) e particao ano (tem '${chave}')"; fi
+  if [[ "$ncol" -eq 15 && "$chave" == "ano" ]]; then
+    ok "15 colunas fisicas + particao 'ano' = 16 logicas"
+  else nao "exige 15 colunas fisicas (tem ${ncol}) e particao ano (tem '${chave}')"; fi
 fi
 echo
 
@@ -121,11 +121,11 @@ consulta() {
   echo "TIMEOUT|0"
 }
 larga="$(consulta "SELECT count(*) FROM \"${DATABASE}\".\"${TABLE}\";")"
-estreita="$(consulta "SELECT count(*) FROM \"${DATABASE}\".\"${TABLE}\" WHERE ano='2024';")"
+estreita="$(consulta "SELECT count(*) FROM \"${DATABASE}\".\"${TABLE}\" WHERE ano = 2024;")"
 info "larga (sem WHERE): ${larga%%|*} · ${larga##*|} bytes"
 info "estreita (ano=2024): ${estreita%%|*} · ${estreita##*|} bytes"
-if [[ "${larga%%|*}" == "FAILED" && "${estreita%%|*}" == "SUCCEEDED" ]]; then
-  ok "o freio tocou na larga e deixou a estreita passar"
+if [[ ( "${larga%%|*}" == "FAILED" || "${larga%%|*}" == "CANCELLED" ) && "${estreita%%|*}" == "SUCCEEDED" ]]; then
+  ok "o freio cancelou a larga e deixou a estreita passar"
 elif [[ "${larga%%|*}" == "SUCCEEDED" ]]; then
   nao "consulta larga passou — teto alto demais"
 else nao "estreita nao respondeu — confira Location/particoes"; fi

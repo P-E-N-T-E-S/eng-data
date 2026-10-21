@@ -70,13 +70,15 @@ resource "aws_glue_catalog_table" "crime_trusted" {
       name                  = "csv-serde"
       serialization_library = "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe"
       parameters = {
-        "field.delim"            = ","
-        "serialization.format"   = ","
-        "skip.header.line.count" = "1"
+        "field.delim"               = ","
+        "serialization.format"      = ","
+        "skip.header.line.count"    = "1"
+        "serialization.null.format" = "\\N"
       }
     }
 
-    # 14 colunas originais + ano + mes = 16 (declaradas, sem crawler).
+    # 14 colunas originais + mes. `ano` e fornecido pela particao abaixo,
+    # totalizando 16 colunas logicas sem duplicar o nome no Glue.
     dynamic "columns" {
       for_each = local.colunas
       content {
@@ -89,10 +91,10 @@ resource "aws_glue_catalog_table" "crime_trusted" {
 
 # ---------- 4. Particoes declaradas (ano=2024/2025/2026) ----------
 resource "aws_glue_partition" "ano" {
-  for_each      = toset(var.anos)
-  database_name = aws_glue_catalog_database.crime.name
-  table_name    = aws_glue_catalog_table.crime_trusted.name
-  values        = [each.value]
+  for_each         = toset(var.anos)
+  database_name    = aws_glue_catalog_database.crime.name
+  table_name       = aws_glue_catalog_table.crime_trusted.name
+  partition_values = [each.value]
 
   storage_descriptor {
     location      = "s3://${aws_s3_bucket.trusted.bucket}/crime/ano=${each.value}/"
@@ -103,9 +105,10 @@ resource "aws_glue_partition" "ano" {
       name                  = "csv-serde"
       serialization_library = "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe"
       parameters = {
-        "field.delim"            = ","
-        "serialization.format"   = ","
-        "skip.header.line.count" = "1"
+        "field.delim"               = ","
+        "serialization.format"      = ","
+        "skip.header.line.count"    = "1"
+        "serialization.null.format" = "\\N"
       }
     }
 
@@ -121,12 +124,13 @@ resource "aws_glue_partition" "ano" {
 
 # ---------- 5. Athena workgroup (teto calculado, DECISAO 05) ----------
 resource "aws_athena_workgroup" "crime" {
-  name = var.workgroup_name
-  state = "ENABLED"
+  name          = var.workgroup_name
+  state         = "ENABLED"
+  force_destroy = true # Usa RecursiveDeleteOption ao excluir historico de queries.
 
   configuration {
-    bytes_scanned_cutoff_per_query   = var.bytes_scanned_cutoff
-    enforce_workgroup_configuration  = true
+    bytes_scanned_cutoff_per_query     = var.bytes_scanned_cutoff
+    enforce_workgroup_configuration    = true
     publish_cloudwatch_metrics_enabled = true
 
     result_configuration {
