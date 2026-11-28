@@ -1,0 +1,41 @@
+[
+  {
+    "ano": 2024,
+    "linhas_raw": 764820,
+    "linhas_trusted": 764820,
+    "linhas_refined": 27,
+    "bytes_csv": 67101049,
+    "bytes_trusted": 547480,
+    "bytes_refined": 2577,
+    "sha256_csv": "e59705231f74ee226efdfbd12fabe8955338b77748bb6464d3c3c42b11aa8706",
+    "sha256_trusted": "b4f53fb88037bc4ba86d1d9cceb48e3ce63a5764e7654718d0f4eecf9d29fadb",
+    "sha256_refined": "91bbe9dbb13bc91bb0f0014ac158d883539429d233261a85be6db2be6617c894",
+    "vitimas": 35136
+  },
+  {
+    "ano": 2025,
+    "linhas_raw": 832302,
+    "linhas_trusted": 832302,
+    "linhas_refined": 27,
+    "bytes_csv": 73333990,
+    "bytes_trusted": 610488,
+    "bytes_refined": 2579,
+    "sha256_csv": "8b2e180b7a13990de39912fd4099851902c62522c9267ea691bc21daacda0a46",
+    "sha256_trusted": "dd5f005296c4d6002b4fcddd7c088989259ac8edc3fd6b4e43afdbe62e952ca8",
+    "sha256_refined": "cb55904c5a5f5efb9d83c6cf38be7fa6ec0afb3a85792042f6707d1890be2559",
+    "vitimas": 31520
+  },
+  {
+    "ano": 2026,
+    "linhas_raw": 693138,
+    "linhas_trusted": 693138,
+    "linhas_refined": 27,
+    "bytes_csv": 60962756,
+    "bytes_trusted": 524840,
+    "bytes_refined": 2577,
+    "sha256_csv": "836a7acc9ef4ea3169d0330ce712b7052e98ee19d54a4a6594d8a11e70e0bc99",
+    "sha256_trusted": "2aa4c62f7b00e3eb7a96ab5c4f9ddc92cd9bc78fe88d12f573cdb7cc4fe63ac8",
+    "sha256_refined": "2d109faac5558b26690192d78261b11750685f431afb6c42f06dcaaeb4a54ae6",
+    "vitimas": 23264
+  }
+]

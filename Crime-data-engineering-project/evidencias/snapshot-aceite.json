@@ -1,0 +1,521 @@
+{
+  "trusted_counts": {
+    "2024": 764820,
+    "2025": 832302,
+    "2026": 693138
+  },
+  "refined": [
+    {
+      "uf": "AC",
+      "ano": "2024",
+      "vitimas": "157",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AL",
+      "ano": "2024",
+      "vitimas": "1029",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AM",
+      "ano": "2024",
+      "vitimas": "1055",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AP",
+      "ano": "2024",
+      "vitimas": "217",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "BA",
+      "ano": "2024",
+      "vitimas": "4207",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "CE",
+      "ano": "2024",
+      "vitimas": "3178",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "DF",
+      "ano": "2024",
+      "vitimas": "211",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "ES",
+      "ano": "2024",
+      "vitimas": "815",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "GO",
+      "ano": "2024",
+      "vitimas": "903",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MA",
+      "ano": "2024",
+      "vitimas": "1912",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MG",
+      "ano": "2024",
+      "vitimas": "2766",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MS",
+      "ano": "2024",
+      "vitimas": "421",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MT",
+      "ano": "2024",
+      "vitimas": "855",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PA",
+      "ano": "2024",
+      "vitimas": "1804",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PB",
+      "ano": "2024",
+      "vitimas": "955",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PE",
+      "ano": "2024",
+      "vitimas": "3209",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PI",
+      "ano": "2024",
+      "vitimas": "584",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PR",
+      "ano": "2024",
+      "vitimas": "1554",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RJ",
+      "ano": "2024",
+      "vitimas": "3238",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RN",
+      "ano": "2024",
+      "vitimas": "636",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RO",
+      "ano": "2024",
+      "vitimas": "418",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RR",
+      "ano": "2024",
+      "vitimas": "111",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RS",
+      "ano": "2024",
+      "vitimas": "1418",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "SC",
+      "ano": "2024",
+      "vitimas": "512",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "SE",
+      "ano": "2024",
+      "vitimas": "355",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "SP",
+      "ano": "2024",
+      "vitimas": "2377",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "TO",
+      "ano": "2024",
+      "vitimas": "239",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AC",
+      "ano": "2025",
+      "vitimas": "164",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AL",
+      "ano": "2025",
+      "vitimas": "903",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AM",
+      "ano": "2025",
+      "vitimas": "707",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AP",
+      "ano": "2025",
+      "vitimas": "185",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "BA",
+      "ano": "2025",
+      "vitimas": "3663",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "CE",
+      "ano": "2025",
+      "vitimas": "2927",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "DF",
+      "ano": "2025",
+      "vitimas": "221",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "ES",
+      "ano": "2025",
+      "vitimas": "762",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "GO",
+      "ano": "2025",
+      "vitimas": "757",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MA",
+      "ano": "2025",
+      "vitimas": "1815",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MG",
+      "ano": "2025",
+      "vitimas": "2317",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MS",
+      "ano": "2025",
+      "vitimas": "309",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "MT",
+      "ano": "2025",
+      "vitimas": "675",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PA",
+      "ano": "2025",
+      "vitimas": "1683",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PB",
+      "ano": "2025",
+      "vitimas": "899",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PE",
+      "ano": "2025",
+      "vitimas": "2883",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PI",
+      "ano": "2025",
+      "vitimas": "489",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "PR",
+      "ano": "2025",
+      "vitimas": "1183",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RJ",
+      "ano": "2025",
+      "vitimas": "3342",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RN",
+      "ano": "2025",
+      "vitimas": "824",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RO",
+      "ano": "2025",
+      "vitimas": "414",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RR",
+      "ano": "2025",
+      "vitimas": "127",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "RS",
+      "ano": "2025",
+      "vitimas": "1054",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "SC",
+      "ano": "2025",
+      "vitimas": "429",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "SE",
+      "ano": "2025",
+      "vitimas": "284",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "SP",
+      "ano": "2025",
+      "vitimas": "2257",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "TO",
+      "ano": "2025",
+      "vitimas": "247",
+      "meses_informados": "12"
+    },
+    {
+      "uf": "AC",
+      "ano": "2026",
+      "vitimas": "105",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "AL",
+      "ano": "2026",
+      "vitimas": "723",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "AM",
+      "ano": "2026",
+      "vitimas": "562",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "AP",
+      "ano": "2026",
+      "vitimas": "152",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "BA",
+      "ano": "2026",
+      "vitimas": "2537",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "CE",
+      "ano": "2026",
+      "vitimas": "1287",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "DF",
+      "ano": "2026",
+      "vitimas": "163",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "ES",
+      "ano": "2026",
+      "vitimas": "553",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "GO",
+      "ano": "2026",
+      "vitimas": "635",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "MA",
+      "ano": "2026",
+      "vitimas": "1432",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "MG",
+      "ano": "2026",
+      "vitimas": "1635",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "MS",
+      "ano": "2026",
+      "vitimas": "415",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "MT",
+      "ano": "2026",
+      "vitimas": "498",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "PA",
+      "ano": "2026",
+      "vitimas": "1399",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "PB",
+      "ano": "2026",
+      "vitimas": "721",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "PE",
+      "ano": "2026",
+      "vitimas": "2155",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "PI",
+      "ano": "2026",
+      "vitimas": "379",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "PR",
+      "ano": "2026",
+      "vitimas": "878",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "RJ",
+      "ano": "2026",
+      "vitimas": "2633",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "RN",
+      "ano": "2026",
+      "vitimas": "765",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "RO",
+      "ano": "2026",
+      "vitimas": "265",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "RR",
+      "ano": "2026",
+      "vitimas": "85",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "RS",
+      "ano": "2026",
+      "vitimas": "777",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "SC",
+      "ano": "2026",
+      "vitimas": "330",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "SE",
+      "ano": "2026",
+      "vitimas": "215",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "SP",
+      "ano": "2026",
+      "vitimas": "1743",
+      "meses_informados": "10"
+    },
+    {
+      "uf": "TO",
+      "ano": "2026",
+      "vitimas": "222",
+      "meses_informados": "10"
+    }
+  ],
+  "costs": [
+    {
+      "ano": 2024,
+      "query_execution_id": "dbf58ea6-da12-411c-94e9-c4106bf0c78d",
+      "bytes_lidos": 370,
+      "meta_bytes": 1048576,
+      "usd_por_tb": "5",
+      "custo_estimado_usd": "0.000047684"
+    },
+    {
+      "ano": 2025,
+      "query_execution_id": "0f923ff6-6aa9-421b-bc96-f1db6e52fb35",
+      "bytes_lidos": 378,
+      "meta_bytes": 1048576,
+      "usd_por_tb": "5",
+      "custo_estimado_usd": "0.000047684"
+    },
+    {
+      "ano": 2026,
+      "query_execution_id": "cfc63fa2-9237-4c3f-9512-950c30efdf7c",
+      "bytes_lidos": 376,
+      "meta_bytes": 1048576,
+      "usd_por_tb": "5",
+      "custo_estimado_usd": "0.000047684"
+    }
+  ]
+}

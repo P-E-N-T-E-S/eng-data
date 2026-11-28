@@ -1,0 +1,13 @@
+output "raw_bucket" { value = try(aws_s3_bucket.layer["raw"].id, var.raw_bucket_name) }
+output "trusted_bucket" { value = aws_s3_bucket.layer["trusted"].id }
+output "refined_bucket" { value = try(aws_s3_bucket.layer["refined"].id, var.refined_bucket_name) }
+output "database_raw" { value = aws_glue_catalog_database.layer["raw"].name }
+output "database_trusted" { value = aws_glue_catalog_database.layer["trusted"].name }
+output "database_refined" { value = aws_glue_catalog_database.layer["refined"].name }
+output "table_raw" { value = aws_glue_catalog_table.raw.name }
+output "table_trusted" { value = aws_glue_catalog_table.trusted.name }
+output "table_refined" { value = aws_glue_catalog_table.refined.name }
+output "workgroup" { value = aws_athena_workgroup.crime.name }
+output "job" { value = aws_glue_job.pipeline.name }
+output "role_analyst" { value = aws_iam_role.consumer["analyst"].arn }
+output "role_manager" { value = aws_iam_role.consumer["manager"].arn }

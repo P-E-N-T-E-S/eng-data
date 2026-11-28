@@ -1,0 +1,81 @@
+module.platform.aws_glue_catalog_database.layer["trusted"]: Refreshing state... [id=325583868777:eda262_g04_crime_trusted]
+module.platform.data.aws_caller_identity.current: Reading...
+module.platform.aws_glue_catalog_database.layer["raw"]: Refreshing state... [id=325583868777:eda262_g04_crime_raw]
+module.platform.aws_glue_catalog_database.layer["refined"]: Refreshing state... [id=325583868777:eda262_g04_crime_refined]
+module.platform.aws_iam_role.lakeformation: Refreshing state... [id=eda262-g04-crime-av2-lakeformation]
+module.platform.aws_iam_role.job: Refreshing state... [id=eda262-g04-crime-av2-glue]
+module.platform.aws_s3_bucket.layer["raw"]: Refreshing state... [id=eda262-g04-lake-raw]
+module.platform.aws_s3_bucket.layer["trusted"]: Refreshing state... [id=eda262-g04-lake-trusted]
+module.platform.aws_s3_bucket.layer["refined"]: Refreshing state... [id=eda262-g04-lake-refined]
+module.platform.data.aws_caller_identity.current: Read complete after 0s [id=325583868777]
+module.platform.aws_iam_role.consumer["analyst"]: Refreshing state... [id=eda262-g04-crime-av2-analyst]
+module.platform.aws_iam_role.consumer["manager"]: Refreshing state... [id=eda262-g04-crime-av2-manager]
+module.platform.aws_lakeformation_permissions.database["manager-refined"]: Refreshing state... [id=1895247297]
+module.platform.aws_lakeformation_permissions.database["analyst-trusted"]: Refreshing state... [id=3638575195]
+module.platform.aws_lakeformation_permissions.database["analyst-refined"]: Refreshing state... [id=4134743587]
+module.platform.aws_iam_role_policy_attachment.job: Refreshing state... [id=eda262-g04-crime-av2-glue-20261128001131705700000001]
+module.platform.aws_iam_role_policy.lakeformation: Refreshing state... [id=eda262-g04-crime-av2-lakeformation:ler-camadas]
+module.platform.aws_iam_role_policy.job_storage: Refreshing state... [id=eda262-g04-crime-av2-glue:camadas]
+module.platform.aws_s3_bucket_versioning.layer["refined"]: Refreshing state... [id=eda262-g04-lake-refined]
+module.platform.aws_s3_bucket_versioning.layer["trusted"]: Refreshing state... [id=eda262-g04-lake-trusted]
+module.platform.aws_s3_bucket_versioning.layer["raw"]: Refreshing state... [id=eda262-g04-lake-raw]
+module.platform.aws_s3_object.pipeline: Refreshing state... [id=scripts/pipeline_crime.py]
+module.platform.aws_glue_catalog_table.refined: Refreshing state... [id=325583868777:eda262_g04_crime_refined:homicidios_uf]
+module.platform.aws_glue_catalog_table.raw: Refreshing state... [id=325583868777:eda262_g04_crime_raw:crime]
+module.platform.aws_athena_workgroup.crime: Refreshing state... [id=eda262-g04-crime-av2-wg]
+module.platform.aws_glue_catalog_table.trusted: Refreshing state... [id=325583868777:eda262_g04_crime_trusted:crime]
+module.platform.aws_s3_bucket_server_side_encryption_configuration.layer["refined"]: Refreshing state... [id=eda262-g04-lake-refined]
+module.platform.aws_s3_bucket_server_side_encryption_configuration.layer["trusted"]: Refreshing state... [id=eda262-g04-lake-trusted]
+module.platform.aws_s3_bucket_server_side_encryption_configuration.layer["raw"]: Refreshing state... [id=eda262-g04-lake-raw]
+module.platform.aws_s3_bucket_public_access_block.layer["raw"]: Refreshing state... [id=eda262-g04-lake-raw]
+module.platform.aws_s3_bucket_public_access_block.layer["refined"]: Refreshing state... [id=eda262-g04-lake-refined]
+module.platform.aws_s3_bucket_public_access_block.layer["trusted"]: Refreshing state... [id=eda262-g04-lake-trusted]
+module.platform.aws_lakeformation_resource.layer["trusted"]: Refreshing state... [id=arn:aws:s3:::eda262-g04-lake-trusted]
+module.platform.aws_lakeformation_resource.layer["raw"]: Refreshing state... [id=arn:aws:s3:::eda262-g04-lake-raw]
+module.platform.aws_lakeformation_resource.layer["refined"]: Refreshing state... [id=arn:aws:s3:::eda262-g04-lake-refined]
+module.platform.aws_glue_job.pipeline: Refreshing state... [id=eda262-g04-crime-av2]
+module.platform.aws_lakeformation_permissions.analyst_refined: Refreshing state... [id=4199811714]
+module.platform.aws_lakeformation_permissions.manager_refined: Refreshing state... [id=1611917672]
+module.platform.aws_glue_partition.refined["2026"]: Refreshing state... [id=325583868777:eda262_g04_crime_refined:homicidios_uf:2026]
+module.platform.aws_glue_partition.refined["2025"]: Refreshing state... [id=325583868777:eda262_g04_crime_refined:homicidios_uf:2025]
+module.platform.aws_glue_partition.refined["2024"]: Refreshing state... [id=325583868777:eda262_g04_crime_refined:homicidios_uf:2024]
+module.platform.aws_glue_partition.raw["2024"]: Refreshing state... [id=325583868777:eda262_g04_crime_raw:crime:2024]
+module.platform.aws_glue_partition.raw["2025"]: Refreshing state... [id=325583868777:eda262_g04_crime_raw:crime:2025]
+module.platform.aws_glue_partition.raw["2026"]: Refreshing state... [id=325583868777:eda262_g04_crime_raw:crime:2026]
+module.platform.aws_lakeformation_permissions.analyst_trusted: Refreshing state... [id=4060589627]
+module.platform.aws_glue_partition.trusted["2025"]: Refreshing state... [id=325583868777:eda262_g04_crime_trusted:crime:2025]
+module.platform.aws_glue_partition.trusted["2024"]: Refreshing state... [id=325583868777:eda262_g04_crime_trusted:crime:2024]
+module.platform.aws_glue_partition.trusted["2026"]: Refreshing state... [id=325583868777:eda262_g04_crime_trusted:crime:2026]
+module.platform.aws_iam_policy.consumer: Refreshing state... [id=arn:aws:iam::325583868777:policy/eda262-g04-crime-av2-consulta]
+module.platform.aws_iam_role_policy_attachment.consumer["analyst"]: Refreshing state... [id=eda262-g04-crime-av2-analyst-20261128001137103400000002]
+module.platform.aws_iam_role_policy_attachment.consumer["manager"]: Refreshing state... [id=eda262-g04-crime-av2-manager-20261128001137147000000003]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration
+and found no differences, so no changes are needed.
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+database_raw = "eda262_g04_crime_raw"
+database_refined = "eda262_g04_crime_refined"
+database_trusted = "eda262_g04_crime_trusted"
+job = "eda262-g04-crime-av2"
+query_cutoff_bytes = 10485760
+query_target_bytes = 1048576
+raw_bucket = "eda262-g04-lake-raw"
+refined_bucket = "eda262-g04-lake-refined"
+role_analyst = "arn:aws:iam::325583868777:role/eda262-g04-crime-av2-analyst"
+role_manager = "arn:aws:iam::325583868777:role/eda262-g04-crime-av2-manager"
+table_raw = "crime"
+table_refined = "homicidios_uf"
+table_trusted = "crime"
+trusted_bucket = "eda262-g04-lake-trusted"
+workgroup = "eda262-g04-crime-av2-wg"
+years = tolist([
+  "2024",
+  "2025",
+  "2026",
+])

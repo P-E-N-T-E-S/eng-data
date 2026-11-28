@@ -1,0 +1,5 @@
+[PASSA] backend e workspace av2
+[PASSA] catálogo, formatos, partições, contratos e tags
+[PASSA] arquivos raw e um Parquet por partição
+[PASSA] resultado analítico e meta de custo
+[PASSA] permissão por camada via Lake Formation

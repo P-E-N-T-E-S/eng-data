@@ -1,0 +1,26 @@
+[
+  {
+    "ano": 2024,
+    "query_execution_id": "dbf58ea6-da12-411c-94e9-c4106bf0c78d",
+    "bytes_lidos": 370,
+    "meta_bytes": 1048576,
+    "usd_por_tb": "5",
+    "custo_estimado_usd": "0.000047684"
+  },
+  {
+    "ano": 2025,
+    "query_execution_id": "0f923ff6-6aa9-421b-bc96-f1db6e52fb35",
+    "bytes_lidos": 378,
+    "meta_bytes": 1048576,
+    "usd_por_tb": "5",
+    "custo_estimado_usd": "0.000047684"
+  },
+  {
+    "ano": 2026,
+    "query_execution_id": "cfc63fa2-9237-4c3f-9512-950c30efdf7c",
+    "bytes_lidos": 376,
+    "meta_bytes": 1048576,
+    "usd_por_tb": "5",
+    "custo_estimado_usd": "0.000047684"
+  }
+]

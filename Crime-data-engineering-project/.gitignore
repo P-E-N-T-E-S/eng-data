@@ -1,9 +1,12 @@
-# Dados gerados localmente a partir dos XLSX versionados fora do Git.
-av1/dados/BancoVDE_*.csv
-av1/evidencias/
-
-# Artefatos locais do Terraform. O arquivo .terraform.lock.hcl deve ser versionado.
+parte-1/data/raw/
+parte-1/dados/BancoVDE_*.csv
+parte-2/data/
 **/.terraform/
 *.tfstate
 *.tfstate.*
+*.tfplan
 crash.log
+.venv/
+.av1/
+.av2/
+__pycache__/

@@ -1,0 +1,16 @@
+output "raw_bucket" { value = module.platform.raw_bucket }
+output "trusted_bucket" { value = module.platform.trusted_bucket }
+output "refined_bucket" { value = module.platform.refined_bucket }
+output "database_raw" { value = module.platform.database_raw }
+output "database_trusted" { value = module.platform.database_trusted }
+output "database_refined" { value = module.platform.database_refined }
+output "table_raw" { value = module.platform.table_raw }
+output "table_trusted" { value = module.platform.table_trusted }
+output "table_refined" { value = module.platform.table_refined }
+output "workgroup" { value = module.platform.workgroup }
+output "job" { value = module.platform.job }
+output "role_analyst" { value = module.platform.role_analyst }
+output "role_manager" { value = module.platform.role_manager }
+output "years" { value = var.years }
+output "query_target_bytes" { value = var.query_target_bytes }
+output "query_cutoff_bytes" { value = var.query_cutoff_bytes }

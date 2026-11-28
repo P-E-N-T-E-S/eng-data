@@ -1,0 +1,14 @@
+{
+  "observado_em": "2026-11-27T21:27:00-03:00",
+  "descricao": "Somente 2024 tem horário posterior ao da segunda carga completa.",
+  "trusted": [
+    {"ano": 2024, "ultima_modificacao_utc": "2026-11-28T00:23:18Z", "bytes": 600704, "versao": "PaW0KRS2y1wUAA59KvLWplfarrIUpIct"},
+    {"ano": 2025, "ultima_modificacao_utc": "2026-11-28T00:20:27Z", "bytes": 676531, "versao": "74pT1DIiTWvou84BZEByIun_ST_hFr1E"},
+    {"ano": 2026, "ultima_modificacao_utc": "2026-11-28T00:20:36Z", "bytes": 582873, "versao": "PJW7ztToeLJ7cWTgGQkt_rSk2SmeDlot"}
+  ],
+  "refined": [
+    {"ano": 2024, "ultima_modificacao_utc": "2026-11-28T00:23:19Z", "bytes": 1232, "versao": "743HNFcxWozcYogK4lj4AgUBeTPXfquP"},
+    {"ano": 2025, "ultima_modificacao_utc": "2026-11-28T00:20:28Z", "bytes": 1240, "versao": "1DIJLqSHuXDi6N12KA8crrAfc.P.NCi1"},
+    {"ano": 2026, "ultima_modificacao_utc": "2026-11-28T00:20:37Z", "bytes": 1238, "versao": "lMKfF_4Ocw1NGudjGzszmRWWQoEgV.q3"}
+  ]
+}

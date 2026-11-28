@@ -1,0 +1,38 @@
+[
+  {
+    "teste": "analyst-trusted",
+    "esperado": "permitido",
+    "estado": "SUCCEEDED",
+    "id": "899a5119-d11b-4090-9d7e-c3abb8370787"
+  },
+  {
+    "teste": "analyst-refined",
+    "esperado": "permitido",
+    "estado": "SUCCEEDED",
+    "id": "ce0f5f57-1012-4229-8835-434bc384194a"
+  },
+  {
+    "teste": "analyst-raw",
+    "esperado": "negado",
+    "estado": "FAILED",
+    "id": "4702930c-0a33-4a83-b91c-ba3938977305"
+  },
+  {
+    "teste": "manager-refined",
+    "esperado": "permitido",
+    "estado": "SUCCEEDED",
+    "id": "dcce4878-53a4-474f-8c91-b56b229dc37b"
+  },
+  {
+    "teste": "manager-trusted",
+    "esperado": "negado",
+    "estado": "FAILED",
+    "id": "eff43149-244a-4b83-9cc1-233f246422e9"
+  },
+  {
+    "teste": "manager-raw",
+    "esperado": "negado",
+    "estado": "FAILED",
+    "id": "712b81ca-891b-4d7b-b58a-17416d5192c1"
+  }
+]

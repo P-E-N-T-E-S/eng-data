@@ -1,0 +1,26 @@
+{
+    "JobRun": {
+        "Id": "jr_7e4cda97c3b0a8732bff5db0e2a134b23bd8e02a1b670e11b28d9cb66d32c5b4",
+        "Attempt": 0,
+        "JobName": "eda262-g04-crime-av2",
+        "JobMode": "SCRIPT",
+        "JobRunQueuingEnabled": false,
+        "StartedOn": "2026-11-27T21:22:02.315000-03:00",
+        "LastModifiedOn": "2026-11-27T21:23:31.728000-03:00",
+        "CompletedOn": "2026-11-27T21:23:31.728000-03:00",
+        "JobRunState": "SUCCEEDED",
+        "Arguments": {
+            "--YEARS": "2024"
+        },
+        "PredecessorRuns": [],
+        "AllocatedCapacity": 2,
+        "ExecutionTime": 80,
+        "Timeout": 30,
+        "MaxCapacity": 2.0,
+        "WorkerType": "G.1X",
+        "NumberOfWorkers": 2,
+        "LogGroupName": "/aws-glue/jobs",
+        "GlueVersion": "4.0",
+        "DPUSeconds": 160.0
+    }
+}
